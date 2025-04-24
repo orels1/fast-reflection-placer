@@ -1,0 +1,19 @@
+{
+    "name": "Fast Reflection Placer",
+    "id": "sh.orels.fast-reflection-placer",
+    "url": "https://orels1.github.io/fast-reflection-placer/index.json",
+    "author": {
+        "email": "ping@orels.sh",
+        "name": "orels1",
+        "url": "https://github.com/orels1"
+    },
+    "description": "Quickly Place reflection probes in the middle of the room",
+    "infoLink": {
+        "url": "http://github.com/orels1/fast-reflection-placer",
+        "text": "View on GitHub"
+    },
+    "bannerUrl": "banner.png",
+    "githubRepos": [
+        "orels1/fast-reflection-placer"
+    ]
+}
