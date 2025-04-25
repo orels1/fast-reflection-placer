@@ -2,6 +2,8 @@
 
 Quickly Place reflection probes in the middle of the room
 
+https://github.com/user-attachments/assets/fbfb85c3-c064-448f-8583-ff3222df361a
+
 ## Installation
 
 ### VRChat Creator Companion
