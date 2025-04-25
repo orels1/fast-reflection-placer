@@ -1,7 +1,5 @@
 /*/
 
 !com.vrchat.core.vpm-resolver
-!sh.orels.shaders.generator
-!sh.orels.shaders.inspector
-!sh.orels.shaders
 !com.vrchat.core.*/
+!sh.orels.fast-reflection-placer

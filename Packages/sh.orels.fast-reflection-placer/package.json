@@ -1,0 +1,17 @@
+{
+  "name": "sh.orels.fast-reflection-placer",
+  "displayName": "Fast Reflection Placer",
+  "description": "Quickly Place reflection probes in the middle of the room",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "author": {
+    "name": "orels1",
+    "url": "https://github.com/orels1"
+  },
+  "keywords": [
+    "tools",
+    "editor"
+  ],
+  "license": "MIT",
+  "type": "tool"
+}
