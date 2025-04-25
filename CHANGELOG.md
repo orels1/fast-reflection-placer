@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.1
+## v1.1.0
 
 - Change: Probes are created with box projection enabled
 - Change: Disabled right click to exit, can use Escape key instead now
