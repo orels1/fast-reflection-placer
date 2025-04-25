@@ -35,4 +35,4 @@ Having issues? [Hop by the discord](https://discord.gg/orels1)
 - Click the mouse to place a probe in the middle of the highlighted area
 - Click and drag the mouse to adjust the placement of the probe. The capture point will be indicated by a Cyan sphere
 - Release the mouse to drop the probe at the capture point
-- Right click to exit the tool, or click it again in the scene view toolbar
+- Press Escape to exit the tool, or click it again in the scene view toolbar

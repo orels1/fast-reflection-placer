@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using UnityEditor;
 using UnityEditor.EditorTools;
+using UnityEditor.ShortcutManagement;
 using UnityEngine;
 
 namespace ORL.FRP
@@ -22,6 +23,12 @@ namespace ORL.FRP
         private void OnDisable()
         {
             _toolbarIcon = null;
+        }
+
+        [Shortcut("FRP.StartProbePlacer", displayName = "Fast Reflection Placer/Start Probe Placer")]
+        public static void StartProbePlacer()
+        {
+            ToolManager.SetActiveTool<FastReflectionPlacerTool>();
         }
 
 
@@ -47,6 +54,14 @@ namespace ORL.FRP
         public override void OnToolGUI(EditorWindow window)
         {
             if (window is not SceneView _) return;
+
+
+            if (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.Escape)
+            {
+                ToolManager.RestorePreviousPersistentTool();
+                Event.current.Use();
+                return;
+            }
 
             var ray = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition);
             var hits = new RaycastHit[100];
@@ -120,10 +135,11 @@ namespace ORL.FRP
                     Handles.DrawWireCube(correctHit, new Vector3(xSize, ySize, zSize));
 
                     if (Event.current.control || Event.current.alt) break;
-                    if (Event.current.button == 1)
+                    if (Event.current.button == 1 && Event.current.type == EventType.MouseDown)
                     {
 
                         ToolManager.RestorePreviousPersistentTool();
+                        Event.current.Use();
                         break;
                     }
                     if (Event.current.button != 0) break;
@@ -135,7 +151,6 @@ namespace ORL.FRP
 
                     if (Event.current.type == EventType.MouseDrag)
                     {
-
                         Event.current.Use();
                     }
 
@@ -172,6 +187,7 @@ namespace ORL.FRP
                             probe.center = newProbeGO.transform.InverseTransformPoint(new Vector3(hit.point.x, correctHit.y, hit.point.z));
                         }
                         probe.hdr = true;
+                        probe.boxProjection = true;
                         Undo.CollapseUndoOperations(group);
                         _bakeReflectionMethod?.Invoke(null, new object[] { probe });
 

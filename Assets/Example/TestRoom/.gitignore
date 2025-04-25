@@ -1,0 +1,3 @@
+# Ignore all non-env probes, used for testing placing
+!ReflectionProbe-0.exr
+ReflectionProbe-*.exr*
