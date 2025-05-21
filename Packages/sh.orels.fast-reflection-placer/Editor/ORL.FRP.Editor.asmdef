@@ -1,3 +1,6 @@
 {
-	"name": "ORL.FRP.Editor"
+	"name": "ORL.FRP.Editor",
+	"includePlatforms": [
+		"Editor"
+	]
 }
